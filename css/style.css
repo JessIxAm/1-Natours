@@ -1,3 +1,35 @@
+@keyframes moveInLeft {
+  /*Used in .heading-primary--main*/
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  /*Used in .heading-primary--sub*/
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0; }
+  80% {
+    transform: translateY(-0.5rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
 *,
 *::before,
 *::after {
@@ -64,30 +96,7 @@ body {
     /*! think 17.4px*/
     animation: moveInRight 1s ease-out; }
 
-@keyframes moveInLeft {
-  /*Used in .heading-primary--main*/
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInRight {
-  /*Used in .heading-primary--sub*/
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   font-size: 1.6rem;
   color: inherit;
   text-decoration: none;
@@ -101,6 +110,9 @@ body {
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -117,28 +129,13 @@ body {
   z-index: -1;
   transition: all .4s; }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
 .btn--white {
   background-color: #fff;
   color: #777; }
-
-.btn--white::after {
-  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
   /*? the button take the first defined state in our keyframes --> here: at 0% */ }
-
-@keyframes moveInBottom {
-  0% {
-    transform: translateY(3rem);
-    opacity: 0; }
-  80% {
-    transform: translateY(-0.5rem); }
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
