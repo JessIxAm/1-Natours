@@ -18,5 +18,8 @@
     "bugs": {
         "url": "https://github.com/JessIxAm/1-Natours/issues"
     },
-    "homepage": "https://github.com/JessIxAm/1-Natours"
+    "homepage": "https://github.com/JessIxAm/1-Natours",
+    "devDependencies": {
+        "node-sass": "^6.0.1"
+    }
 }
