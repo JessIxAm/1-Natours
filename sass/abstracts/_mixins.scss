@@ -1,0 +1,13 @@
+@mixin clearfix{
+    &::after{
+        content: '';
+        display: table;
+        clear:both;
+    }
+}
+
+@mixin notLastChild-mgr{
+    &:not(:last-child){
+            margin-right: $gutter-horizontal;
+    }
+}
