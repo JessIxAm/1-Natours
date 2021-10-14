@@ -4,7 +4,8 @@
     "description": "Landing page for Natours",
     "main": "index.js",
     "scripts": {
-        "compile:sass": "node-sass sass/main.scss css/style.css -w"
+        "compile:sass": "node-sass sass/main.scss css/style.css -w",
+        "format": "prettier --write '*.html' 'sass/*' 'css/*' "
     },
     "repository": {
         "type": "git",
@@ -20,7 +21,8 @@
     },
     "homepage": "https://github.com/JessIxAm/1-Natours",
     "devDependencies": {
-        "node-sass": "^6.0.1"
+        "node-sass": "^6.0.1",
+        "prettier": "2.4.1"
     },
     "dependencies": {
         "uuid": "^7.0.3"
