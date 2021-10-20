@@ -3,6 +3,7 @@
         "accusantium",
         "adipisicing",
         "amet",
+        "aspernatur",
         "consectetur",
         "elit",
         "facere",
@@ -13,7 +14,8 @@
         "pariatur",
         "Recusandae",
         "reprehenderit",
-        "saepe"
+        "saepe",
+        "sapiente"
     ],
 
     "editor.defaultFormatter": "esbenp.prettier-vscode",
