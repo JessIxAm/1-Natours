@@ -1,0 +1,81 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem; //6rem + 3rem
+    font-size: $default-font-size;
+
+    position: relative;
+    transform: skewX(-12deg);
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+
+        -webkit-shape-outside: circle(50% at 505 50%);
+        shape-outside: circle(50% at 50% 50%);
+        //first 50% -- the radius
+        //2nd and 3th the coordinate of the center of the circle
+        //? only works on a floated element with defined dimensions
+
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        // or simply use border-radius: 50%;
+
+        transform: skewX(12deg) translateX(-3rem);
+        //?  best way to add a margin to an floated element. instead of using margin property
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            clear: both;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        transform: translateX(-20%) scale(1.2);
+
+        transition: all 0.5s ease-in-out;
+        backface-visibility: hidden;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        opacity: 0;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+
+        transition: all 0.4s ease-in-out;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden; //fix the glitch of shaking
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+
+    //on .story:hover (change for __img and __caption9
+    &:hover {
+        .story__img {
+            transform: translateX(-15%) scale(1);
+            filter: blur(4px) brightness(80%);
+        }
+
+        .story__caption {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+    }
+}
