@@ -1,13 +1,20 @@
-@mixin clearfix{
-    &::after{
-        content: '';
+@mixin clearfix {
+    &::after {
+        content: "";
         display: table;
-        clear:both;
+        clear: both;
     }
 }
 
-@mixin notLastChild-mgr{
-    &:not(:last-child){
-            margin-right: $gutter-horizontal;
+@mixin notLastChild-mgr {
+    &:not(:last-child) {
+        margin-right: $gutter-horizontal;
     }
+}
+
+@mixin absolute-vh-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
