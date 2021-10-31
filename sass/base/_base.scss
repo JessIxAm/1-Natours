@@ -1,15 +1,44 @@
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit; /*? best practice*/
 }
 
-html{
+html {
     font-size: 62.5%;
+
+    // @include respond-phone {
+    //     font-size: 50%;
+    // }
+
+    // > 1800px?
+    @include respond(big) {
+        font-size: 75%;
+    }
+
+    // < 1200 px?
+    @include respond(tab-l) {
+        font-size: 56.25%;
+    }
+
+    // < 900 px?
+    @include respond(tab-p) {
+        font-size: 50%;
+    }
+
+    // < 600 px?
+    @include respond(phone) {
+        font-size: 50%;
+    }
 }
 
-body{
+body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-l) {
+        padding: 0;
+    }
 }

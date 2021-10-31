@@ -6,12 +6,20 @@
 }
 .u-margin-bottom-m {
     margin-bottom: 4rem !important;
+
+    @include respond(tab-p) {
+        margin-top: 3rem !important;
+    }
 }
 .u-margin-bottom-l {
     margin-bottom: 8rem !important;
 }
 .u-margin-top-l {
     margin-top: 8rem !important;
+
+    @include respond(tab-p) {
+        margin-top: 5rem !important;
+    }
 }
 .u-margin-top-xl {
     margin-top: 10rem !important;
