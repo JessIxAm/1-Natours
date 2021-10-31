@@ -114,6 +114,11 @@
                     <div class="col-1-2">
                         <div class="composition">
                             <img
+                                srcset="
+                                    img/nat-1.jpg        300w,
+                                    img/nat-1-large.jpg 1000w
+                                "
+                                sizes=" (max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
                                 src="img/nat-1-large.jpg"
                                 alt="photo 1"
                                 class="
@@ -122,6 +127,11 @@
                             />
 
                             <img
+                                srcset="
+                                    img/nat-2.jpg        300w,
+                                    img/nat-2-large.jpg 1000w
+                                "
+                                sizes=" (max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
                                 src="img/nat-2-large.jpg"
                                 alt="photo 2"
                                 class="
@@ -130,6 +140,11 @@
                             />
 
                             <img
+                                srcset="
+                                    img/nat-3.jpg        300w,
+                                    img/nat-3-large.jpg 1000w
+                                "
+                                sizes=" (max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
                                 src="img/nat-3-large.jpg"
                                 alt="photo 3"
                                 class="
@@ -522,11 +537,24 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img
-                    class="footer__logo"
-                    src="img/logo-green-2x.png"
-                    alt="Full logo"
-                />
+                <picture class="footer__logo">
+                    <source
+                        media="(max-width: 37.5em)"
+                        srcset="
+                            img/logo-green-small-1x.png 1x,
+                            img/logo-green-small-2x.png 2x
+                        "
+                    />
+
+                    <img
+                        srcset="
+                            img/logo-green-1x.png 1x,
+                            img/logo-green-2x.png 2x
+                        "
+                        src="img/logo-green-2x.png"
+                        alt="Full logo"
+                    />
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-2">
