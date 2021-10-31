@@ -23,6 +23,11 @@
         @include absolute-vh-centered;
         overflow: hidden;
 
+        @include respond(tab-l) {
+            text-align: center;
+            width: 90%;
+        }
+
         //?tricks 1
         display: table;
 
@@ -30,6 +35,15 @@
         transform: translate(-50%, -50%) scale(0.25);
 
         transition: all 0.4s 0.2s;
+
+        @include respond(tab-l) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__left {
@@ -37,6 +51,19 @@
 
         //?tricks 2
         display: table-cell;
+
+        @include respond(tab-l) {
+            width: 100%;
+        }
+
+        @include respond(tab-p) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__right {
@@ -47,11 +74,26 @@
         vertical-align: middle;
 
         padding: 3rem 5rem;
+
+        @include respond(tab-l) {
+            width: 100%;
+            align-self: center;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-l) {
+            width: 100%;
+            backface-visibility: hidden;
+        }
+
+        @include respond(tab-p) {
+            align-self: center;
+            height: 100%;
+        }
     }
 
     &__text {
@@ -71,6 +113,10 @@
         -ms-hyphens: auto;
         -moz-hyphens: auto;
         hyphens: auto; //! works with <html lang="">
+
+        @include respond(tab-l) {
+            text-align: left;
+        }
     }
 
     &:target {

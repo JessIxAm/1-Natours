@@ -469,6 +469,9 @@ body {
   width: 90%;
   display: block;
   transition: all 0.3s; }
+  @media screen and (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -495,6 +498,10 @@ body {
 .form__radio-group {
   display: inline-block;
   width: 49%; }
+  @media screen and (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-input {
   visibility: hidden;
@@ -543,6 +550,14 @@ body {
   font-size: 1.6rem;
   position: relative;
   transform: skewX(-12deg); }
+  @media screen and (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media screen and (max-width: 37.5em) {
+    .story {
+      transform: skew(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -557,6 +572,9 @@ body {
       width: 100%;
       height: 100%;
       clear: both; }
+    @media screen and (max-width: 37.5em) {
+      .story__shape {
+        transform: skewX(0) translate(-3rem); } }
   .story__img {
     height: 100%;
     transform: translateX(-20%) scale(1.2);
@@ -577,6 +595,10 @@ body {
     backface-visibility: hidden; }
   .story__text {
     transform: skewX(12deg); }
+    @media screen and (max-width: 37.5em) {
+      .story__text {
+        transform: skew(0);
+        hyphens: auto; } }
   .story:hover .story__img {
     transform: translateX(-15%) scale(1);
     filter: blur(4px) brightness(80%); }
@@ -610,17 +632,50 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.2s; }
+    @media screen and (max-width: 75em) {
+      .popup__content {
+        text-align: center;
+        width: 90%; } }
+    @media screen and (max-width: 75em) {
+      .popup__content {
+        display: grid;
+        grid-template-columns: 1fr 2fr; } }
+    @media screen and (max-width: 37.5em) {
+      .popup__content {
+        grid-template-columns: 1fr; } }
   .popup__left {
     width: 33.33333333%;
     display: table-cell; }
+    @media screen and (max-width: 75em) {
+      .popup__left {
+        width: 100%; } }
+    @media screen and (max-width: 56.25em) {
+      .popup__left {
+        display: grid;
+        grid-template-columns: 1fr; } }
+    @media screen and (max-width: 37.5em) {
+      .popup__left {
+        display: none; } }
   .popup__right {
     width: 66.66666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media screen and (max-width: 75em) {
+      .popup__right {
+        width: 100%;
+        align-self: center; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media screen and (max-width: 75em) {
+      .popup__img {
+        width: 100%;
+        backface-visibility: hidden; } }
+    @media screen and (max-width: 56.25em) {
+      .popup__img {
+        align-self: center;
+        height: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -634,6 +689,9 @@ body {
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto; }
+    @media screen and (max-width: 75em) {
+      .popup__text {
+        text-align: left; } }
   .popup:target {
     opacity: 1;
     visibility: visible;
@@ -950,14 +1008,36 @@ body {
 .section-book {
   padding: 15rem 0;
   background: linear-gradient(to right bottom, #7ed56f, #55c57a); }
+  @media screen and (max-width: 75em) {
+    .section-book {
+      margin-top: -39px !important; } }
   @media screen and (max-width: 56.25em) {
     .section-book {
       padding: 10rem 0; } }
   .section-book .book {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+    @media screen and (max-width: 75em) {
+      .section-book .book {
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url("../img/nat-10.jpg");
+        background-size: cover; } }
+    @media screen and (max-width: 56.25em) {
+      .section-book .book {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url("../img/nat-10.jpg"); } }
     .section-book .book__form {
       width: 50%;
       padding: 6rem; }
+      @media screen and (max-width: 75em) {
+        .section-book .book__form {
+          width: 65%; } }
+      @media screen and (max-width: 56.25em) {
+        .section-book .book__form {
+          width: 100%; } }
+
+@media screen and (max-width: 75em) {
+  section {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important; } }

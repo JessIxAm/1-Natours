@@ -63,6 +63,10 @@
         $color-primary
     );
 
+    @include respond(tab-l) {
+        margin-top: -39px !important;
+    }
+
     @include respond(tab-p) {
         padding: 10rem 0;
     }
@@ -76,13 +80,48 @@
             ),
             url("../img/nat-10.jpg");
         background-size: 100%;
+        background-repeat: no-repeat;
 
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
+        @include respond(tab-l) {
+            background-image: linear-gradient(
+                    105deg,
+                    rgba($color-white, 0.9) 0%,
+                    rgba($color-white, 0.9) 65%,
+                    transparent 65%
+                ),
+                url("../img/nat-10.jpg");
+
+            background-size: cover;
+        }
+        @include respond(tab-p) {
+            background-image: linear-gradient(
+                    to right,
+                    rgba($color-white, 0.9) 0%,
+                    rgba($color-white, 0.9) 100%
+                ),
+                url("../img/nat-10.jpg");
+        }
+
         &__form {
             width: 50%;
             padding: 6rem;
+
+            @include respond(tab-l) {
+                width: 65%;
+            }
+            @include respond(tab-p) {
+                width: 100%;
+            }
         }
+    }
+}
+
+section {
+    @include respond(tab-l) {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
     }
 }
