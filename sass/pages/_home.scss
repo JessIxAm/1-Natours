@@ -6,6 +6,7 @@
 
     @include respond(tab-p) {
         padding: 20rem 0;
+        margin-top: -15vh;
     }
 }
 
@@ -48,6 +49,10 @@
 .section-stories {
     padding: 15rem 0;
     position: relative;
+
+    @include respond(big) {
+        padding: 10rem 0;
+    }
 
     @include respond(tab-p) {
         padding: 10rem 0;
